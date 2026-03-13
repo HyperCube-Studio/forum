@@ -1,25 +1,27 @@
 /* HyperCube Studio Forum - Main Styles */
 
 :root {
-    /* Colors */
-    --primary-start: #667eea;
-    --primary-end: #764ba2;
-    --success: #10b981;
-    --warning: #f59e0b;
-    --danger: #ef4444;
-    --text-primary: #1a202c;
-    --text-secondary: #718096;
+    /* Colors - Professional Business */
+    --primary-start: #0a66c2;
+    --primary-end: #004182;
+    --success: #0c8346;
+    --warning: #c67c00;
+    --danger: #c50f1f;
+    --text-primary: #1f1f1f;
+    --text-secondary: #605e5c;
     --bg-primary: #ffffff;
-    --bg-secondary: #f7fafc;
-    --border: #e2e8f0;
-    --shadow: rgba(0, 0, 0, 0.1);
+    --bg-secondary: #f4f6f8;
+    --bg-tertiary: #e1e1e1;
+    --border: #d1d1d1;
+    --shadow: rgba(0, 0, 0, 0.08);
+    --header-bg: #283e4a;
     
-    /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
+    /* Spacing - Compact */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 0.75rem;
+    --spacing-lg: 1rem;
+    --spacing-xl: 1.5rem;
     
     /* Typography */
     --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
@@ -53,13 +55,14 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(90deg, #1a1a2e 0%, #764ba2 100%);
+    background: var(--header-bg);
     color: white;
-    padding: var(--spacing-md) 0;
-    box-shadow: 0 4px 6px var(--shadow);
+    padding: 0.75rem 0;
+    box-shadow: 0 2px 4px var(--shadow);
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-container {
@@ -85,12 +88,12 @@ body {
 }
 
 .site-title {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .site-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.9;
 }
 
@@ -102,38 +105,38 @@ body {
 
 /* Buttons */
 .btn {
-    padding: 0.5rem 1.25rem;
+    padding: 0.4rem 0.9rem;
     border: none;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all var(--transition-normal);
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     text-decoration: none;
     white-space: nowrap;
 }
 
 .btn-primary {
-    background: white;
-    color: var(--primary-start);
+    background: var(--primary-start);
+    color: white;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    background: var(--primary-end);
+    box-shadow: 0 2px 8px rgba(10, 102, 194, 0.3);
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--border);
 }
 
 .btn-ghost {
@@ -162,45 +165,48 @@ body {
 }
 
 .btn-success:hover {
-    background: #059669;
+    background: var(--success);
+    opacity: 0.9;
 }
 
 .btn-sm {
-    padding: 0.4rem 1rem;
-    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
 }
 
 /* Language Switcher */
 .lang-switcher {
     display: flex;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .lang-btn {
-    padding: 0.4rem 0.8rem;
+    padding: 0.3rem 0.6rem;
     background: transparent;
     color: white;
     border: none;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.8rem;
     transition: var(--transition-fast);
 }
 
 .lang-btn.active {
     background: white;
-    color: var(--primary-start);
+    color: var(--header-bg);
 }
 
 /* Dark Mode Toggle */
 .dark-mode-toggle {
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -209,8 +215,7 @@ body {
 }
 
 .dark-mode-toggle:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: rotate(20deg);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 /* User Profile */
@@ -221,15 +226,16 @@ body {
 }
 
 .user-avatar {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     border: 2px solid white;
 }
 
 .user-name {
-    font-weight: 600;
-    max-width: 150px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    max-width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -239,14 +245,14 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     flex: 1;
 }
 
 /* App Grid */
 .apps-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
 }
@@ -254,50 +260,51 @@ body {
 /* App Card */
 .app-card {
     background: var(--bg-primary);
-    border-radius: 16px;
+    border-radius: 6px;
     padding: var(--spacing-lg);
-    box-shadow: 0 4px 6px var(--shadow);
+    box-shadow: 0 1px 3px var(--shadow);
     transition: all var(--transition-normal);
-    border: 2px solid transparent;
+    border: 1px solid var(--border);
 }
 
 .app-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px var(--shadow);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-color: var(--primary-start);
 }
 
 .app-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    margin-bottom: var(--spacing-md);
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-bottom: var(--spacing-sm);
     background: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-end) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .app-name {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 600;
     margin-bottom: var(--spacing-xs);
     color: var(--text-primary);
 }
 
 .app-description {
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-md);
-    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+    font-size: 0.85rem;
 }
 
 .app-stats {
     display: flex;
     gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .app-stat {
@@ -309,17 +316,18 @@ body {
 /* App Detail Page */
 .app-header {
     background: var(--bg-primary);
-    border-radius: 16px;
+    border-radius: 6px;
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
-    box-shadow: 0 4px 6px var(--shadow);
+    box-shadow: 0 1px 3px var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .app-header-top {
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 .app-download-links {
@@ -331,27 +339,29 @@ body {
 .download-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-end) 100%);
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-start);
     color: white;
-    border-radius: 12px;
+    border-radius: 4px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.85rem;
     transition: var(--transition-normal);
 }
 
 .download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+    background: var(--primary-end);
+    box-shadow: 0 4px 8px rgba(10, 102, 194, 0.2);
 }
 
 /* Comments Section */
 .comments-section {
     background: var(--bg-primary);
-    border-radius: 16px;
+    border-radius: 6px;
     padding: var(--spacing-lg);
-    box-shadow: 0 4px 6px var(--shadow);
+    box-shadow: 0 1px 3px var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .comments-header {
@@ -364,8 +374,8 @@ body {
 }
 
 .comments-title {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .comments-controls {
@@ -381,17 +391,19 @@ body {
 }
 
 .search-input {
-    padding: 0.5rem 1rem 0.5rem 2.5rem;
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    font-size: 0.95rem;
-    width: 250px;
+    padding: 0.4rem 0.8rem 0.4rem 2rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 200px;
     transition: var(--transition-fast);
+    background: var(--bg-primary);
 }
 
 .search-input:focus {
     outline: none;
     border-color: var(--primary-start);
+    box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.1);
 }
 
 .search-icon {
@@ -423,17 +435,18 @@ body {
     margin-bottom: var(--spacing-lg);
     padding: var(--spacing-md);
     background: var(--bg-secondary);
-    border-radius: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
 }
 
 .comment-textarea {
     width: 100%;
-    min-height: 120px;
+    min-height: 80px;
     padding: var(--spacing-sm);
-    border: 2px solid var(--border);
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
     font-family: var(--font-primary);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     resize: vertical;
     transition: var(--transition-fast);
 }
@@ -441,6 +454,7 @@ body {
 .comment-textarea:focus {
     outline: none;
     border-color: var(--primary-start);
+    box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.1);
 }
 
 .comment-form-actions {
@@ -480,14 +494,14 @@ body {
 .comment {
     padding: var(--spacing-md);
     background: var(--bg-secondary);
-    border-radius: 12px;
-    border: 2px solid transparent;
+    border-radius: 4px;
+    border: 1px solid var(--border);
     transition: var(--transition-fast);
 }
 
 .comment.pinned {
     border-color: var(--warning);
-    background: #fffbeb;
+    background: #fff9e6;
 }
 
 .comment-header {
@@ -504,8 +518,8 @@ body {
 }
 
 .comment-avatar {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
 }
 
@@ -515,12 +529,13 @@ body {
 }
 
 .comment-author-name {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.85rem;
     color: var(--text-primary);
 }
 
 .comment-date {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
 }
 
