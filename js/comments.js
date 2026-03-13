@@ -165,15 +165,15 @@ async function createCommentElement(comment, isReply = false) {
             <div id="replyForm${comment.id}" class="reply-form" style="display: none;">
                 <textarea id="replyText${comment.id}" class="reply-textarea" placeholder="${t('writeComment')}" maxlength="2000"></textarea>
                 <div class="form-buttons" style="margin-top: 0.5rem;">
-                    <button class="btn btn-success" onclick="submitReply('${comment.id}')">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <button class="btn btn-success btn-sm" onclick="submitReply('${comment.id}')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                         </svg>
-                        <span>${t('send')}</span>
+                        ${t('send')}
                     </button>
-                    <button class="btn btn-secondary" onclick="closeReplyForm('${comment.id}')">
-                        <span>${t('cancel')}</span>
+                    <button class="btn btn-secondary btn-sm" onclick="closeReplyForm('${comment.id}')">
+                        ${t('cancel')}
                     </button>
                 </div>
             </div>
@@ -326,11 +326,11 @@ window.submitReply = async function(parentId) {
         closeReplyForm(parentId);
         showToast(t('commentAdded'), 'success');
         
-        // Reload comments to show the new reply
-        // Note: replies will show after a moment when Firestore processes the timestamp
+        // Force reload after reply is added
+        // Wait a bit for Firestore to process the timestamp
         setTimeout(() => {
-            loadComments();
-        }, 500);
+            location.reload();
+        }, 800);
     } catch (error) {
         console.error('Error adding reply:', error);
         showToast(t('error'), 'error');
