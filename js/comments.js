@@ -166,10 +166,14 @@ async function createCommentElement(comment, isReply = false) {
                 <textarea id="replyText${comment.id}" class="reply-textarea" placeholder="${t('writeComment')}" maxlength="2000"></textarea>
                 <div class="form-buttons" style="margin-top: 0.5rem;">
                     <button class="btn btn-success" onclick="submitReply('${comment.id}')">
-                        <span data-i18n="send"></span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                        <span>${t('send')}</span>
                     </button>
                     <button class="btn btn-secondary" onclick="closeReplyForm('${comment.id}')">
-                        <span data-i18n="cancel"></span>
+                        <span>${t('cancel')}</span>
                     </button>
                 </div>
             </div>
@@ -321,6 +325,12 @@ window.submitReply = async function(parentId) {
         textarea.value = '';
         closeReplyForm(parentId);
         showToast(t('commentAdded'), 'success');
+        
+        // Reload comments to show the new reply
+        // Note: replies will show after a moment when Firestore processes the timestamp
+        setTimeout(() => {
+            loadComments();
+        }, 500);
     } catch (error) {
         console.error('Error adding reply:', error);
         showToast(t('error'), 'error');
