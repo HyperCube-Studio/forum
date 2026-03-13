@@ -115,9 +115,6 @@ async function createCommentElement(comment, isReply = false) {
     const date = comment.createdAt?.toDate?.() || new Date();
     const timeAgo = formatTimeAgo(date);
     
-    // Render reactions
-    const reactionsHtml = renderReactions(comment);
-    
     // Parse markdown
     const contentHtml = renderMarkdown(comment.text);
     
