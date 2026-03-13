@@ -266,6 +266,9 @@ body {
     box-shadow: 0 1px 3px var(--shadow);
     transition: all var(--transition-normal);
     border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .app-card:hover {
@@ -298,6 +301,7 @@ body {
     margin-bottom: var(--spacing-sm);
     line-height: 1.4;
     font-size: 0.85rem;
+    flex-grow: 1;
 }
 
 .app-stats {
