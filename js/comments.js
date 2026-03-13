@@ -363,6 +363,11 @@ window.deleteComment = async function(commentId) {
         await batch.commit();
         
         showToast(t('commentDeleted'), 'success');
+        
+        // Reload page to update UI
+        setTimeout(() => {
+            location.reload();
+        }, 800);
     } catch (error) {
         console.error('Error deleting comment:', error);
         showToast(t('error'), 'error');
@@ -379,6 +384,11 @@ window.togglePin = async function(commentId, pinned) {
         });
         
         showToast(pinned ? t('commentPinned') : t('commentUnpinned'), 'success');
+        
+        // Reload page to update UI
+        setTimeout(() => {
+            location.reload();
+        }, 800);
     } catch (error) {
         console.error('Error toggling pin:', error);
         showToast(t('error'), 'error');
