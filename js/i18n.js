@@ -200,6 +200,11 @@ function updateUI() {
     });
 }
 
+// Get current language
+function getCurrentLang() {
+    return currentLang;
+}
+
 // Initialize i18n
 function initI18n() {
     // Set up language buttons
@@ -213,4 +218,4 @@ function initI18n() {
     updateUI();
 }
 
-export { t, setLanguage, currentLang, initI18n, updateUI };
+export { t, setLanguage, currentLang, getCurrentLang, initI18n, updateUI };

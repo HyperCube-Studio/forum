@@ -1,5 +1,5 @@
 // Forum main functionality
-import { currentLang } from './i18n.js';
+import { getCurrentLang } from './i18n.js';
 
 let db = null;
 let appsData = null;
@@ -60,7 +60,7 @@ async function renderApps() {
                 <img src="${app.icon}" alt="${app.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
             </div>
             <h3 class="app-name">${app.name}</h3>
-            <p class="app-description">${app.description[currentLang]}</p>
+            <p class="app-description">${app.description[getCurrentLang()]}</p>
             <div class="app-stats">
                 <div class="app-stat">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

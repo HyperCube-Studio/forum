@@ -158,7 +158,7 @@
         import { firebaseConfig } from './js/config.js';
         import { initAuth, setupAuthListeners } from './js/auth.js';
         import { initFirestore, loadAppsData, getAppById } from './js/forum.js';
-        import { initI18n, currentLang, updateUI } from './js/i18n.js';
+        import { initI18n, getCurrentLang, updateUI } from './js/i18n.js';
         import { initComments } from './js/comments.js';
         
         // Initialize Firebase
@@ -185,8 +185,9 @@
         function updateAppDescriptions() {
             const app = getAppById(appId);
             if (app) {
-                document.getElementById('appDescription').textContent = app.description[currentLang];
-                document.getElementById('appDetailedDescription').textContent = app.detailedDescription[currentLang];
+                const lang = getCurrentLang();
+                document.getElementById('appDescription').textContent = app.description[lang];
+                document.getElementById('appDetailedDescription').textContent = app.detailedDescription[lang];
             }
         }
         
