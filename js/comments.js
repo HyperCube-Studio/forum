@@ -153,7 +153,6 @@ async function createCommentElement(comment, isReply = false) {
             </div>
         </div>
         <div class="comment-content">${contentHtml}</div>
-        ${reactionsHtml}
         ${!isReply && user ? `
             <button class="btn btn-ghost" onclick="toggleReplyForm('${comment.id}')">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
