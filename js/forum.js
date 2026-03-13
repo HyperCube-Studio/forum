@@ -55,7 +55,9 @@ async function renderApps() {
         const card = document.createElement('div');
         card.className = 'app-card';
         card.innerHTML = `
-            <div class="app-icon">${app.icon}</div>
+            <div class="app-icon">
+                <img src="${app.icon}" alt="${app.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+            </div>
             <h3 class="app-name">${app.name}</h3>
             <p class="app-description">${app.description[currentLang]}</p>
             <div class="app-stats">

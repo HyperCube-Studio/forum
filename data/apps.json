@@ -3,7 +3,7 @@
         {
             "id": "gravon",
             "name": "Gravon",
-            "icon": "🚀",
+            "icon": "assets/gravon.png",
             "description": {
                 "tr": "Yerçekimini kontrol et, uzay aracını yönet! Zorlu parkurları geç ve en iyi pilotu kanıtla.",
                 "en": "Control gravity, pilot your spacecraft! Complete challenging courses and prove you're the best pilot."
@@ -21,7 +21,7 @@
         {
             "id": "digimind",
             "name": "DigiMind",
-            "icon": "🧠",
+            "icon": "assets/digimind.png",
             "description": {
                 "tr": "Dijital hafıza ve düşünce organizasyon uygulaması. Fikirlerinizi düzenleyin, notlarınızı yönetin.",
                 "en": "Digital memory and thought organization app. Organize your ideas, manage your notes."
@@ -39,7 +39,7 @@
         {
             "id": "periodic",
             "name": "Periodic",
-            "icon": "⚛️",
+            "icon": "assets/periodic.png",
             "description": {
                 "tr": "Periyodik tablo uygulaması. Elementleri keşfet, kimyasal özellikleri öğren.",
                 "en": "Periodic table app. Discover elements, learn chemical properties."
