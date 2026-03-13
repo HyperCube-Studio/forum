@@ -252,9 +252,10 @@ body {
 /* App Grid */
 .apps-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
+    max-width: 1000px;
 }
 
 /* App Card */
@@ -774,6 +775,11 @@ body {
     .header-actions {
         justify-content: space-between;
         width: 100%;
+    }
+    
+    .apps-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
     }
     
     .search-input {
