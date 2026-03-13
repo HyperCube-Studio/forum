@@ -1,0 +1,34 @@
+/* Dark Mode Styles */
+
+body.dark-mode {
+    --text-primary: #f7fafc;
+    --text-secondary: #a0aec0;
+    --bg-primary: #1a202c;
+    --bg-secondary: #2d3748;
+    --border: #4a5568;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .comment.pinned {
+    background: #2d3748;
+    border-color: var(--warning);
+}
+
+body.dark-mode .comment-content code,
+body.dark-mode .comment-content pre {
+    background: #0f1419;
+}
+
+body.dark-mode .reaction-btn {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+body.dark-mode .reaction-btn.active {
+    background: linear-gradient(135deg, var(--primary-start) 0%, var(--primary-end) 100%);
+    border-color: var(--primary-start);
+}
+
+body.dark-mode .reply-form {
+    background: var(--bg-secondary);
+}

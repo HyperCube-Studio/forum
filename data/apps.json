@@ -1,0 +1,58 @@
+{
+    "apps": [
+        {
+            "id": "gravon",
+            "name": "Gravon",
+            "icon": "🚀",
+            "description": {
+                "tr": "Yerçekimini kontrol et, uzay aracını yönet! Zorlu parkurları geç ve en iyi pilotu kanıtla.",
+                "en": "Control gravity, pilot your spacecraft! Complete challenging courses and prove you're the best pilot."
+            },
+            "detailedDescription": {
+                "tr": "Gravon, yerçekimi kontrollü bir uzay pilotluk oyunudur. Parkurlarda ustalaşın, fuel'ınızı akıllıca kullanın ve platformlar arasında güvenli inişler yapın. Her seviye yeni zorluklar ve heyecan dolu anlar sunar!",
+                "en": "Gravon is a gravity-controlled space piloting game. Master the courses, use your fuel wisely, and make safe landings between platforms. Each level offers new challenges and exciting moments!"
+            },
+            "downloads": 0,
+            "storeLinks": {
+                "playStore": "#",
+                "appStore": "#"
+            }
+        },
+        {
+            "id": "digimind",
+            "name": "DigiMind",
+            "icon": "🧠",
+            "description": {
+                "tr": "Dijital hafıza ve düşünce organizasyon uygulaması. Fikirlerinizi düzenleyin, notlarınızı yönetin.",
+                "en": "Digital memory and thought organization app. Organize your ideas, manage your notes."
+            },
+            "detailedDescription": {
+                "tr": "DigiMind ile düşüncelerinizi dijital ortamda organize edin. Not alma, fikir yönetimi ve hafıza destekleme özellikleriyle üretkenliğinizi artırın.",
+                "en": "Organize your thoughts digitally with DigiMind. Boost your productivity with note-taking, idea management, and memory support features."
+            },
+            "downloads": 0,
+            "storeLinks": {
+                "playStore": "#",
+                "appStore": "#"
+            }
+        },
+        {
+            "id": "periodic",
+            "name": "Periodic",
+            "icon": "⚛️",
+            "description": {
+                "tr": "Periyodik tablo uygulaması. Elementleri keşfet, kimyasal özellikleri öğren.",
+                "en": "Periodic table app. Discover elements, learn chemical properties."
+            },
+            "detailedDescription": {
+                "tr": "Periodic ile periyodik tabloyu interaktif şekilde keşfedin. Her elementin detaylı bilgilerine erişin, kimyasal özellikleri öğrenin.",
+                "en": "Discover the periodic table interactively with Periodic. Access detailed information about each element and learn chemical properties."
+            },
+            "downloads": 0,
+            "storeLinks": {
+                "playStore": "#",
+                "appStore": "#"
+            }
+        }
+    ]
+}
