@@ -65,14 +65,6 @@ async function renderApps() {
                     </svg>
                     <span>${commentCount} <span data-i18n="comments"></span></span>
                 </div>
-                <div class="app-stat">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    <span>${app.downloads} <span data-i18n="downloads"></span></span>
-                </div>
             </div>
             <a href="app.html?id=${app.id}" class="btn btn-primary" style="width: 100%;">
                 <span data-i18n="viewComments"></span>
