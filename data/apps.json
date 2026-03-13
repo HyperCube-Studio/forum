@@ -23,12 +23,12 @@
             "name": "DigiMind",
             "icon": "assets/digimind.png",
             "description": {
-                "tr": "Dijital hafıza ve düşünce organizasyon uygulaması. Fikirlerinizi düzenleyin, notlarınızı yönetin.",
-                "en": "Digital memory and thought organization app. Organize your ideas, manage your notes."
+                "tr": "Mantık ve strateji! Yapay zekaya karşı gizli sayıyı tahmin et.",
+                "en": "Logic and strategy! Guess the secret number against AI."
             },
             "detailedDescription": {
-                "tr": "DigiMind ile düşüncelerinizi dijital ortamda organize edin. Not alma, fikir yönetimi ve hafıza destekleme özellikleriyle üretkenliğinizi artırın.",
-                "en": "Organize your thoughts digitally with DigiMind. Boost your productivity with note-taking, idea management, and memory support features."
+                "tr": "DigiMind ile Zekânızı Zorlayın!\n\nDigiMind, stratejik düşünme ve mantık yeteneklerinizi test edecek nihai mantık ve çıkarım bulmaca oyunudur! Gizli kodu çözüp yapay zeka rakibinizi yenebilir misiniz?",
+                "en": "Challenge Your Mind with DigiMind!\n\nDigiMind is the ultimate logic and deduction puzzle game that will test your strategic thinking and reasoning skills! Can you crack the secret code and beat your AI opponent?"
             },
             "downloads": 0,
             "storeLinks": {
