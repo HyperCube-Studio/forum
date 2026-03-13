@@ -41,12 +41,12 @@
             "name": "Periodic",
             "icon": "assets/periodic.png",
             "description": {
-                "tr": "Periyodik tablo uygulaması. Elementleri keşfet, kimyasal özellikleri öğren.",
-                "en": "Periodic table app. Discover elements, learn chemical properties."
+                "tr": "Menstural döngülerinizi kayıt altına alın.",
+                "en": "Track your menstrual cycles."
             },
             "detailedDescription": {
-                "tr": "Periodic ile periyodik tabloyu interaktif şekilde keşfedin. Her elementin detaylı bilgilerine erişin, kimyasal özellikleri öğrenin.",
-                "en": "Discover the periodic table interactively with Periodic. Access detailed information about each element and learn chemical properties."
+                "tr": "Periodic; menstural döngü tarihlerinizin kaydını tutar, bu kayıtları kullanarak ileriki tarihler için tahminlerde bulunur.",
+                "en": "Periodic tracks your menstrual cycle dates and uses this data to predict future dates."
             },
             "downloads": 0,
             "storeLinks": {
