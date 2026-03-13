@@ -2,12 +2,12 @@
 // Firebase Console'dan aldığın bilgileri buraya yapıştıracaksın
 
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+apiKey: "AIzaSyAfoSXVudNMGQaAqrh9NO-yg_BGcM8-HS8",
+  authDomain: "hypercube-studio-forum.firebaseapp.com",
+  projectId: "hypercube-studio-forum",
+  storageBucket: "hypercube-studio-forum.firebasestorage.app",
+  messagingSenderId: "899944886178",
+  appId: "1:899944886178:web:aa8508c03b95fb169a0cfb"
 };
 
 // Admin email
