@@ -181,6 +181,20 @@
         // Make updateUI global for comments.js
         window.updateUI = updateUI;
         
+        // Function to update app descriptions based on current language
+        function updateAppDescriptions() {
+            const app = getAppById(appId);
+            if (app) {
+                document.getElementById('appDescription').textContent = app.description[currentLang];
+                document.getElementById('appDetailedDescription').textContent = app.detailedDescription[currentLang];
+            }
+        }
+        
+        // Listen for language changes
+        window.addEventListener('languageChanged', () => {
+            updateAppDescriptions();
+        });
+        
         // Load app data
         loadAppsData().then(() => {
             const app = getAppById(appId);
@@ -192,8 +206,7 @@
             // Update UI with app data
             document.getElementById('appIcon').innerHTML = `<img src="${app.icon}" alt="${app.name}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">`;
             document.getElementById('appName').textContent = app.name;
-            document.getElementById('appDescription').textContent = app.description[currentLang];
-            document.getElementById('appDetailedDescription').textContent = app.detailedDescription[currentLang];
+            updateAppDescriptions();
             document.title = `${app.name} - HyperCube Studio Forum`;
             
             // Update store links

@@ -7,6 +7,7 @@ let currentAppId = null;
 let commentsListener = null;
 let sortBy = 'newest';
 let searchQuery = '';
+let lastComments = [];
 
 // Initialize comments for an app
 function initComments(appId) {
@@ -60,6 +61,7 @@ function loadComments() {
             });
         }
         
+        lastComments = filtered;
         renderComments(filtered);
     });
 }
@@ -499,5 +501,12 @@ function renderMarkdown(text) {
     
     return html;
 }
+
+// Listen for language changes
+window.addEventListener('languageChanged', () => {
+    if (lastComments.length > 0) {
+        renderComments(lastComments);
+    }
+});
 
 export { initComments };
