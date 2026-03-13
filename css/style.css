@@ -252,7 +252,7 @@ body {
 /* App Grid */
 .apps-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
 }
@@ -776,10 +776,6 @@ body {
         width: 100%;
     }
     
-    .apps-grid {
-        grid-template-columns: 1fr;
-    }
-    
     .search-input {
         width: 100%;
     }
@@ -795,6 +791,13 @@ body {
     
     .search-box {
         width: 100%;
+    }
+}
+
+/* Mobile only - 1 column for very small screens */
+@media (max-width: 550px) {
+    .apps-grid {
+        grid-template-columns: 1fr;
     }
 }
 
