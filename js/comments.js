@@ -90,12 +90,45 @@ async function renderComments(comments) {
         // Load replies
         const replies = await loadReplies(comment.id);
         if (replies.length > 0) {
+            // Add toggle button for replies
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'btn btn-ghost btn-sm';
+            toggleBtn.style.marginTop = '0.5rem';
+            toggleBtn.innerHTML = `
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+                <span>${replies.length} Yanıt Göster</span>
+            `;
+            
             const repliesContainer = document.createElement('div');
             repliesContainer.className = 'comment-replies';
+            repliesContainer.style.display = 'none'; // Start hidden
+            repliesContainer.id = `replies-${comment.id}`;
+            
             for (const reply of replies) {
                 const replyEl = await createCommentElement(reply, true);
                 repliesContainer.appendChild(replyEl);
             }
+            
+            // Toggle functionality
+            toggleBtn.addEventListener('click', () => {
+                const isHidden = repliesContainer.style.display === 'none';
+                repliesContainer.style.display = isHidden ? 'block' : 'none';
+                toggleBtn.innerHTML = isHidden ? `
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                    <span>Yanıtları Gizle</span>
+                ` : `
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <span>${replies.length} Yanıt Göster</span>
+                `;
+            });
+            
+            commentEl.appendChild(toggleBtn);
             commentEl.appendChild(repliesContainer);
         }
     }
