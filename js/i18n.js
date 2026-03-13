@@ -211,4 +211,4 @@ function initI18n() {
     updateUI();
 }
 
-export { t, setLanguage, currentLang, initI18n };
+export { t, setLanguage, currentLang, initI18n, updateUI };

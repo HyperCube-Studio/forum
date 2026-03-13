@@ -85,7 +85,7 @@
         import { firebaseConfig } from './js/config.js';
         import { initAuth, setupAuthListeners } from './js/auth.js';
         import { initFirestore, renderApps } from './js/forum.js';
-        import { initI18n } from './js/i18n.js';
+        import { initI18n, updateUI } from './js/i18n.js';
         
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
@@ -96,11 +96,8 @@
         initI18n();
         setupAuthListeners();
         
-        // Make updateUI global for i18n
-        window.updateUI = async () => {
-            const { updateUI } = await import('./js/i18n.js');
-            updateUI();
-        };
+        // Make updateUI global for forum.js
+        window.updateUI = updateUI;
         
         // Load apps
         renderApps();

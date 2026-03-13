@@ -161,7 +161,7 @@
         import { firebaseConfig } from './js/config.js';
         import { initAuth, setupAuthListeners } from './js/auth.js';
         import { initFirestore, loadAppsData, getAppById } from './js/forum.js';
-        import { initI18n, currentLang } from './js/i18n.js';
+        import { initI18n, currentLang, updateUI } from './js/i18n.js';
         import { initComments } from './js/comments.js';
         import './js/reactions.js';
         
@@ -182,11 +182,8 @@
             window.location.href = 'index.html';
         }
         
-        // Make updateUI global for i18n
-        window.updateUI = async () => {
-            const { updateUI } = await import('./js/i18n.js');
-            updateUI();
-        };
+        // Make updateUI global for comments.js
+        window.updateUI = updateUI;
         
         // Load app data
         loadAppsData().then(() => {
