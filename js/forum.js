@@ -47,6 +47,7 @@ async function renderApps() {
     if (!data) return;
     
     const container = document.getElementById('appsGrid');
+    if (!container) return;
     container.innerHTML = '';
     
     for (const app of data.apps) {
@@ -87,5 +88,12 @@ async function renderApps() {
 function getDb() {
     return db;
 }
+
+// Listen for language changes
+window.addEventListener('languageChanged', () => {
+    if (document.getElementById('appsGrid')) {
+        renderApps();
+    }
+});
 
 export { initFirestore, loadAppsData, getAppById, getCommentCount, renderApps, getDb };

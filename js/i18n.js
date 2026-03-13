@@ -177,6 +177,8 @@ function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('lang', lang);
     updateUI();
+    // Dispatch custom event for language change
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
 }
 
 // Update all translatable elements
