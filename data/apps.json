@@ -71,6 +71,24 @@
                 "playStore": "#",
                 "appStore": "#"
             }
+        },
+        {
+            "id": "chromia",
+            "name": "Chromia",
+            "icon": "assets/logo.png",
+            "description": {
+                "tr": "Renkli balonları şişir, patlatmayı planla! Hız, dikkat ve strateji gerektiren bağımlılık yapan oyun.",
+                "en": "Inflate colorful balloons, plan your pops! Fast-paced puzzle game requiring speed and strategy."
+            },
+            "detailedDescription": {
+                "tr": "Chromia'da ekrana çıkan renkli balonlara dokunarak onları şişirin ve patlatın. Doğru zamanlama ve planlama ile yüksek skor elde edin. Her seviyede artan hız ve zorluk sizi bekliyor!",
+                "en": "In Chromia, touch the colorful balloons on screen to inflate and pop them. Achieve high scores with perfect timing and planning. Increasing speed and difficulty await you in every level!"
+            },
+            "downloads": 0,
+            "storeLinks": {
+                "playStore": "#",
+                "appStore": "#"
+            }
         }
     ]
 }
