@@ -53,6 +53,24 @@
                 "playStore": "#",
                 "appStore": "#"
             }
+        },
+        {
+            "id": "aquarush",
+            "name": "AquaRush",
+            "icon": "assets/aquarush4.png",
+            "description": {
+                "tr": "Yüksek hızda drift yarışları! Fizik motoruyla gerçekçi tekne kontrolü.",
+                "en": "High Speed Drift Boat Race"
+            },
+            "detailedDescription": {
+                "tr": "AquaRush, gerçekçi fizik motoru ile heyecan dolu bir tekne yarış oyunudur. Sularda drift yapın, rakiplerinizi geride bırakın ve drift challenge'ları tamamlayın. Her viraj adrenalin dolu bir macera!",
+                "en": "AquaRush is an exciting boat racing game with a realistic physics engine. Drift on water, leave your opponents behind, and complete drift challenges. Every turn is an adrenaline-filled adventure!"
+            },
+            "downloads": 0,
+            "storeLinks": {
+                "playStore": "#",
+                "appStore": "#"
+            }
         }
     ]
 }
